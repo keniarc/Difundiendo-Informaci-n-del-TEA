@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Young+Serif&display=swap');
+/*Fuente qe importe de otra pagina*/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffedd7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  font-family: "Playpen Sans", cursive;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #2a9d8f 0%, #1a2e38 100%);
+  z-index: 0;
+}
+
+.scene {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 16px);
+  padding: clamp(16px, 4vw, 40px);
+  width: 100%;
+  max-width: 800px;
+}
+
+#infinityCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+}
+
+.text-top,
+.text-bottom {
+  opacity: 0;
+  text-align: center;
+  color: #fcf4f0;
+  will-change: opacity;
+  width: 100%;
+  max-width: 700px;
+  padding: 0 clamp(8px, 3vw, 24px);
+}
+
+.text-top {
+  font-size: clamp(0.8rem, 5.8vw, 1.80rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: clamp(0.1em, 0.8vw, 0.22em);
+  line-height: 1.5;
+}
+
+.text-bottom {
+  font-size: clamp(0.8rem, 3.7vw, 1.90rem);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.label {
+  display: none;
+}

@@ -1,0 +1,420 @@
+/* ============================================================
+   REFERENCIAS.CSS — estilos exclusivos de Referencias.html
+   ============================================================ */
+
+/* ——— HERO ——— */
+.ref-hero {
+  background: linear-gradient(135deg, var(--c1) 0%, var(--c2) 60%, var(--c3) 100%);
+  min-height: 42vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.ref-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 90% 20%, rgba(233,196,106,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(42,157,143,0.15) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.ref-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+
+.ref-pill {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+.ref-pill:hover {
+  background: rgba(255,255,255,0.28);
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* ——— CONTROLS BAR ——— */
+.ref-controls-section {
+  background: var(--cream);
+  border-bottom: 1px solid rgba(38,70,83,0.08);
+  padding: 1.5rem clamp(1.5rem, 6vw, 6rem);
+  position: sticky;
+  top: 68px;
+  z-index: 50;
+  box-shadow: 0 2px 16px rgba(38,70,83,0.06);
+}
+
+.ref-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+/* Search */
+.ref-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+  max-width: 440px;
+}
+
+.ref-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.ref-search {
+  width: 100%;
+  padding: 0.7rem 2.5rem 0.7rem 2.6rem;
+  border: 2px solid rgba(38,70,83,0.12);
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  background: white;
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.ref-search:focus {
+  border-color: var(--c3);
+  box-shadow: 0 0 0 4px rgba(42,157,143,0.1);
+}
+
+.ref-search-clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: var(--transition);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ref-search-clear.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.ref-search-clear:hover { color: var(--c10); }
+
+/* Filters */
+.ref-filters {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.ref-filter {
+  background: white;
+  border: 1.5px solid rgba(38,70,83,0.14);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.ref-filter:hover {
+  border-color: var(--c3);
+  color: var(--c3);
+}
+
+.ref-filter.active {
+  background: var(--c3);
+  border-color: var(--c3);
+  color: white;
+}
+
+/* Count */
+.ref-count {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.ref-count strong { color: var(--c3); }
+
+/* ——— GROUP HEADER ——— */
+.ref-group {
+  margin-bottom: 4rem;
+}
+
+.ref-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.ref-group-icon { font-size: 1.4rem; }
+
+.ref-group-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--c1);
+  white-space: nowrap;
+}
+
+.ref-group-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(42,157,143,0.3), transparent);
+  border-radius: 1px;
+}
+
+/* ——— REFERENCE LIST ——— */
+.ref-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0;
+}
+
+/* ——— REFERENCE ITEM ——— */
+.ref-item {
+  display: flex;
+  gap: 1.25rem;
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(38,70,83,0.07);
+  border-left: 4px solid var(--c3);
+  transition: var(--transition);
+  animation: refIn 0.35s ease both;
+}
+
+.ref-item[data-type="libro"]   { border-left-color: var(--c3); }
+.ref-item[data-type="articulo"]{ border-left-color: var(--c6); }
+.ref-item[data-type="web"]     { border-left-color: var(--c9); }
+
+.ref-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.ref-item.hidden {
+  display: none;
+}
+
+@keyframes refIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Number bubble */
+.ref-number {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--c3), var(--c2));
+  color: white;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 0.15rem;
+}
+
+.ref-item[data-type="articulo"] .ref-number {
+  background: linear-gradient(135deg, var(--c6), var(--c7));
+  color: var(--c1);
+}
+
+.ref-item[data-type="web"] .ref-number {
+  background: linear-gradient(135deg, var(--c9), var(--c10));
+}
+
+/* Body */
+.ref-body { flex: 1; min-width: 0; }
+
+.ref-citation {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.ref-title {
+  font-style: italic;
+  color: var(--c1);
+  font-weight: 600;
+}
+
+.ref-link {
+  color: var(--c3);
+  font-size: 0.88rem;
+  word-break: break-all;
+  transition: var(--transition);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ref-link:hover { color: var(--c2); }
+
+/* Meta row */
+.ref-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.ref-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+}
+
+.ref-badge--libro   { background: rgba(42,157,143,0.12);  color: var(--c2); }
+.ref-badge--articulo{ background: rgba(233,196,106,0.2);  color: #7a6520; }
+.ref-badge--web     { background: rgba(231,111,81,0.12);  color: var(--c10); }
+
+.ref-year {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* Note */
+.ref-note {
+  font-size: 0.84rem;
+  color: var(--text-light);
+  background: rgba(42,157,143,0.05);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Actions */
+.ref-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.ref-copy-btn,
+.ref-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.ref-copy-btn {
+  background: rgba(42,157,143,0.1);
+  border: 1.5px solid rgba(42,157,143,0.25);
+  color: var(--c3);
+}
+.ref-copy-btn:hover {
+  background: var(--c3);
+  color: white;
+  border-color: var(--c3);
+}
+.ref-copy-btn.copied {
+  background: var(--c4);
+  border-color: var(--c4);
+  color: white;
+}
+
+.ref-visit-btn {
+  background: rgba(231,111,81,0.08);
+  border: 1.5px solid rgba(231,111,81,0.25);
+  color: var(--c9);
+  text-decoration: none;
+}
+.ref-visit-btn:hover {
+  background: var(--c9);
+  color: white;
+  border-color: var(--c9);
+}
+
+/* ——— EMPTY STATE ——— */
+.ref-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-light);
+}
+
+.ref-empty-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+/* ——— APA NOTE ——— */
+.ref-apa-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(42,157,143,0.07);
+  border: 1px solid rgba(42,157,143,0.2);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.ref-apa-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+.ref-apa-note p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.ref-apa-note strong { color: var(--c2); }
+
+/* ——— HIGHLIGHT al buscar ——— */
+mark.ref-highlight {
+  background: rgba(233,196,106,0.4);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* ——— RESPONSIVE ——— */
+@media (max-width: 600px) {
+  .ref-item { flex-direction: column; gap: 1rem; }
+  .ref-number { width: 30px; height: 30px; font-size: 0.8rem; }
+  .ref-controls { flex-direction: column; align-items: stretch; }
+  .ref-search-wrap { max-width: 100%; }
+  .ref-controls-section { position: static; }
+}

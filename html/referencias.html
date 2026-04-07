@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referencias — Autismo</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/refe.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <span class="nav-logo-text">Difundiendo Información del TEA</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/html/inicio.html">Inicio</a></li>
+    <li><a href="/html/historia.html">Historia</a></li>
+    <li><a href="/html/caracteristicasyCondiciones.html">Características</a></li>
+    <li><a href="/html/sociedad.html">Sociedad</a></li>
+    <li><a href="/html/apoyando.html">Apoyando</a></li>
+    <li><a href="/html/referencias.html" >Referencias</a></li>
+  </ul>
+  <button class="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Mobile menu -->
+<nav class="nav-mobile-menu">
+  <a href="/html/inicio.html">Inicio</a>
+  <a href="/html/historia.html">Historia</a>
+  <a href="/html/caracteristicasyCondiciones.html">Características</a>
+  <a href="/html/sociedad.html">Sociedad</a>
+  <a href="/html/apoyando.html">Apoyando</a>
+  <a href="/html/referencias.html">Referencias</a>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero ref-hero">
+  <div class="ref-hero-bg"></div>
+  <div class="page-hero-content reveal">
+    <span class="section-tag" style="background:rgba(233,196,106,0.2);color:var(--c6);">Bibliografía</span>
+    <h1 style="color:white;">Referencias</h1>
+    <p style="color:rgba(255,255,255,0.85);">Toda la información encontrada en la página es recolectada de otras fuentes, esta página es meramente informativa, si desea visitar las fuentes de origen estas serian las referencias.</p>
+    <p style="color:rgba(255,255,255,0.85);">No todas las referencia están, las paginas más repetidas son las que encontrará aqui, si desea ver las referencias sin citar pero completas puede descargar el PDF.</p>
+    <div class="ref-hero-pills">
+      <a href="#libros" class="ref-pill">📚 Libros</a>
+      <a href="#articulos" class="ref-pill">📄 Artículos</a>
+      <a href="#web" class="ref-pill">🌐 Recursos web</a>
+      <a href="/docs/Referencias sin citar.pdf" download class="ref-pill">📄 Descargar todas las referencias</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     BUSCADOR + FILTROS
+     ============================================================ -->
+<section class="ref-controls-section">
+  <div class="container">
+    <div class="ref-controls">
+      <div class="ref-search-wrap">
+        <span class="ref-search-icon">🔍</span>
+        <input
+          type="text"
+          id="refSearch"
+          class="ref-search"
+          placeholder="Buscar por autor, título o año…"
+          aria-label="Buscar referencias"
+        />
+        <button class="ref-search-clear" id="refClear" aria-label="Limpiar búsqueda">✕</button>
+      </div>
+      <div class="ref-filters" role="group" aria-label="Filtrar por tipo">
+        <button class="ref-filter active" data-filter="all">Todas</button>
+        <button class="ref-filter" data-filter="libro">📚 Libros</button>
+        <button class="ref-filter" data-filter="articulo">📄 Artículos</button>
+        <button class="ref-filter" data-filter="web">🌐 Web</button>
+      </div>
+    </div>
+    <p class="ref-count" id="refCount">Mostrando <strong>3</strong> referencias</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     LIBROS
+     ============================================================ -->
+<main class="section" style="padding-top:2rem;">
+  <div class="container">
+
+    <div class="ref-group" id="libros">
+      <div class="ref-group-header">
+        <span class="ref-group-icon"></span>
+        <h2 class="ref-group-title">Citas de información</h2>
+        <div class="ref-group-line"></div>
+      </div>
+
+      <ol class="ref-list" id="refList">
+
+        <!-- REF 1 — Libro -->
+        <li class="ref-item" data-type="libro" data-keywords="kanner autismo 1943 disturbances affective contact">
+          <div class="ref-number">1</div>
+          <div class="ref-body">
+            <p class="ref-citation">
+              Kanner, L. (1943). <span class="ref-title">Autistic disturbances of affective contact.</span>
+              <em>Nervous Child, 2</em>(3), 217–250.
+            </p>
+            <div class="ref-meta">
+              <span class="ref-badge ref-badge--libro">📚 Libro / Artículo fundacional</span>
+              <!--<span class="ref-year">1943</span>-->
+            </div>
+            <!--<p class="ref-note">Primera descripción clínica formal del autismo infantil. Referencia primaria indispensable para comprender el origen del diagnóstico.</p>-->
+            <div class="ref-actions">
+              <button class="ref-copy-btn" data-ref="Kanner, L. (1943). Autistic disturbances of affective contact. Nervous Child, 2(3), 217–250." aria-label="Copiar cita">
+                📋 Copiar cita
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <!-- REF 2 — Artículo -->
+        <li class="ref-item" data-type="articulo" data-keywords="american psychiatric association dsm-5 2013 diagnostic statistical manual">
+          <div class="ref-number">2</div>
+          <div class="ref-body">
+            <p class="ref-citation">
+              American Psychiatric Association. (2013). <span class="ref-title">Diagnostic and statistical manual of mental disorders</span>
+              (5.ª ed.). American Psychiatric Publishing.
+            </p>
+            <div class="ref-meta">
+              <span class="ref-badge ref-badge--articulo">📄 Manual diagnóstico</span>
+              <!--<span class="ref-year">2013</span>-->
+            </div>
+            <!--<p class="ref-note">Criterios diagnósticos actuales del Trastorno del Espectro Autista (TEA), utilizados como referencia para la sección de diagnóstico y características.</p>-->
+            
+            <div class="ref-actions">
+              <button class="ref-copy-btn" data-ref="American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5.ª ed.). American Psychiatric Publishing." aria-label="Copiar cita">
+                📋 Copiar cita
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <!-- REF 3 — Web -->
+        <li class="ref-item" data-type="web" data-keywords="onu naciones unidas 2007 dia mundial autismo resolucion 62 139">
+          <div class="ref-number">3</div>
+          <div class="ref-body">
+            <p class="ref-citation">
+              Organización de las Naciones Unidas. (2007, 1 de noviembre).
+              <span class="ref-title">Resolución 62/139: Día Mundial de Concienciación sobre el Autismo.</span>
+              Asamblea General de la ONU.
+              <a class="ref-link" href="https://www.un.org/es/observances/autism-day" target="_blank" rel="noopener noreferrer">
+                https://www.un.org/es/observances/autism-day ↗
+              </a>
+            </p>
+            <div class="ref-meta">
+              <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+              <!--<span class="ref-year">2007</span>-->
+            </div>
+            <!--<p class="ref-note">Declaración oficial que estableció el 2 de abril como Día Mundial de Concienciación sobre el Autismo. Fuente primaria para la sección histórica.</p>-->
+            
+            <div class="ref-actions">
+              <button class="ref-copy-btn" data-ref="Organización de las Naciones Unidas. (2007). Resolución 62/139: Día Mundial de Concienciación sobre el Autismo. https://www.un.org/es/observances/autism-day" aria-label="Copiar cita">
+                📋 Copiar cita
+                <!--</button>
+              <a class="ref-visit-btn" href="https://www.un.org/es/observances/autism-day" target="_blank" rel="noopener noreferrer">
+                🌐 Visitar fuente
+              </a>-->
+              
+            </div>
+          </div>
+        </li>
+
+        <!-- REF 4 -->
+<li class="ref-item" data-type="web" data-keywords="oms autismo">
+  <div class="ref-number">4</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Organización Mundial de la Salud. (s.f.).
+      <span class="ref-title">Autismo (trastornos del espectro autista).</span>
+      <a class="ref-link" href="https://www.who.int/es/news-room/fact-sheets/detail/autism-spectrum-disorders" target="_blank">
+        https://www.who.int ↗
+      </a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Organización Mundial de la Salud. Autismo.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 5 -->
+<li class="ref-item" data-type="web" data-keywords="autism speaks autismo">
+  <div class="ref-number">5</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Autism Speaks. (s.f.).
+      <span class="ref-title">¿Qué es el autismo?</span>
+      <a class="ref-link" href="https://www.autismspeaks.org/what-autism" target="_blank">
+        https://www.autismspeaks.org ↗
+      </a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Autism Speaks. ¿Qué es el autismo?">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 6 -->
+<li class="ref-item" data-type="web" data-keywords="mayo clinic autismo sintomas">
+  <div class="ref-number">6</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Mayo Clinic. (s.f.).
+      <span class="ref-title">Trastorno del espectro autista: síntomas y causas.</span>
+      <a class="ref-link" href="https://www.mayoclinic.org/es/diseases-conditions/autism-spectrum-disorder/symptoms-causes/syc-20352928" target="_blank">
+        https://www.mayoclinic.org ↗
+      </a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Mayo Clinic. Autismo.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 7 -->
+<li class="ref-item" data-type="web" data-keywords="nimh autismo">
+  <div class="ref-number">7</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      National Institute of Mental Health. (s.f.).
+      <span class="ref-title">Trastornos del espectro autista.</span>
+      <a class="ref-link" href="https://www.nimh.nih.gov/health/publications/espanol/trastornos-del-espectro-autista" target="_blank">
+        https://www.nimh.nih.gov ↗
+      </a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="NIMH. Autismo.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 8 -->
+<li class="ref-item" data-type="web" data-keywords="neurodiversidad">
+  <div class="ref-number">8</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Child Mind Institute. (s.f.).
+      <span class="ref-title">¿Qué es la neurodiversidad?</span>
+      <a class="ref-link" href="https://childmind.org/es/articulo/que-es-la-neurodiversidad/" target="_blank">
+        https://childmind.org ↗
+      </a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Child Mind Institute. Neurodiversidad.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 9 -->
+<li class="ref-item" data-type="articulo" data-keywords="valproato autismo estudio">
+  <div class="ref-number">9</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Zarate-Lopez, D., et al. (2024).
+      <span class="ref-title">Three decades of valproate: A current model for studying autism spectrum disorder.</span>
+      <a class="ref-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10783964/" target="_blank">
+        https://pmc.ncbi.nlm.nih.gov ↗
+      </a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--articulo">📄 Artículo científico</span>
+      <span class="ref-year">2024</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Zarate-Lopez et al. (2024).">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 10 (video como web) -->
+<li class="ref-item" data-type="web" data-keywords="youtube neurodiversidad">
+  <div class="ref-number">10</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      YouTube. (2026).
+      <span class="ref-title">¿Tienes un trastorno o solo eres diferente? La neurodiversidad.</span>
+      <a class="ref-link" href="https://www.youtube.com/watch?v=mYgaF5_fyhU" target="_blank">
+        https://youtube.com ↗
+      </a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="YouTube. Neurodiversidad.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+
+<!-- REF 11 -->
+<li class="ref-item" data-type="web" data-keywords="discapnet enfermedad tipos">
+  <div class="ref-number">11</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Discapnet. (s.f.).
+      <span class="ref-title">Qué es una enfermedad y tipos de enfermedades.</span>
+      <a class="ref-link" href="https://www.discapnet.es" target="_blank">https://www.discapnet.es ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Discapnet. (s.f.). Enfermedades.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 12 -->
+<li class="ref-item" data-type="web" data-keywords="autistica autismo causas mitos">
+  <div class="ref-number">12</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Autistica. (s.f.).
+      <span class="ref-title">Myths and causes - Autism.</span>
+      <a class="ref-link" href="https://www.autistica.org.uk" target="_blank">https://www.autistica.org.uk ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Autistica. (s.f.). Autism.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 13 -->
+<li class="ref-item" data-type="web" data-keywords="ehlers danlos sindrome">
+  <div class="ref-number">13</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      The Ehlers-Danlos Society. (s.f.).
+      <span class="ref-title">¿Qué es el síndrome de Ehlers-Danlos (SED)?</span>
+      <a class="ref-link" href="https://www.ehlers-danlos.com" target="_blank">https://www.ehlers-danlos.com ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Ehlers-Danlos Society.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 14 -->
+<li class="ref-item" data-type="web" data-keywords="hipersensibilidad autismo">
+  <div class="ref-number">14</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Valley Oaks Health. (s.f.).
+      <span class="ref-title">Hypersensitivity or hyposensitivity.</span>
+      <a class="ref-link" href="https://www.valleyoaks.org/health-hub/hypersensitivity-or-hyposensitivity/" target="_blank">https://www.valleyoaks.org ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Valley Oaks Health.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 15 -->
+<li class="ref-item" data-type="web" data-keywords="comorbilidades autismo">
+  <div class="ref-number">15</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Blossom ABA Therapy. (s.f.).
+      <span class="ref-title">Entendiendo la lista de comorbilidades del autismo.</span>
+      <a class="ref-link" href="https://blossomabatherapy.com" target="_blank">https://blossomabatherapy.com ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Blossom ABA Therapy.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 16 -->
+<li class="ref-item" data-type="web" data-keywords="dificultades sociales autismo">
+  <div class="ref-number">16</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      KU School of Education. (s.f.).
+      <span class="ref-title">Social difficulties in autism.</span>
+      <a class="ref-link" href="https://soe.ku.edu" target="_blank">https://soe.ku.edu ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="KU Education.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 17 -->
+<li class="ref-item" data-type="web" data-keywords="autism research institute">
+  <div class="ref-number">17</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Autism Research Institute. (s.f.).
+      <span class="ref-title">Global networks.</span>
+      <a class="ref-link" href="https://www.autism.org" target="_blank">https://www.autism.org ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Autism Research Institute.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 18 -->
+<li class="ref-item" data-type="web" data-keywords="asan autismo">
+  <div class="ref-number">18</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Autistic Self Advocacy Network. (s.f.).
+      <span class="ref-title">About ASAN.</span>
+      <a class="ref-link" href="https://autisticadvocacy.org" target="_blank">https://autisticadvocacy.org ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="ASAN.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 19 -->
+<li class="ref-item" data-type="web" data-keywords="autism europe">
+  <div class="ref-number">19</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Autism Europe. (s.f.).
+      <span class="ref-title">Autism Europe.</span>
+      <a class="ref-link" href="https://www.autismeurope.org" target="_blank">https://www.autismeurope.org ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Autism Europe.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 20 -->
+<li class="ref-item" data-type="web" data-keywords="autismo españa">
+  <div class="ref-number">20</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Autismo España. (s.f.).
+      <span class="ref-title">Nuestra identidad.</span>
+      <a class="ref-link" href="https://autismo.org.es" target="_blank">https://autismo.org.es ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Autismo España.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 21 -->
+<li class="ref-item" data-type="web" data-keywords="conectea autismo">
+  <div class="ref-number">21</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Fundación ConecTEA. (s.f.).
+      <span class="ref-title">La participación social de las personas con autismo.</span>
+      <a class="ref-link" href="https://www.fundacionconectea.org" target="_blank">https://www.fundacionconectea.org ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Fundación ConecTEA.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 22 -->
+<li class="ref-item" data-type="web" data-keywords="neurodiversidad beneficios">
+  <div class="ref-number">22</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Psychology Today. (s.f.).
+      <span class="ref-title">Neurodiversidad y los beneficios del autismo.</span>
+      <a class="ref-link" href="https://www.psychologytoday.com" target="_blank">https://www.psychologytoday.com ↗</a>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+    <div class="ref-actions">
+      <button class="ref-copy-btn" data-ref="Psychology Today.">📋 Copiar cita</button>
+    </div>
+  </div>
+</li>
+
+<!-- REF 23 -->
+<li class="ref-item" data-type="web">
+  <div class="ref-number">23</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Blue Gems ABA. (s.f.).
+      <span class="ref-title">Autism colors and symbols.</span>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 24 -->
+<li class="ref-item" data-type="web">
+  <div class="ref-number">24</div>
+  <div class="ref-body">
+    <p class="ref-citation">
+      Som360. (s.f.).
+      <span class="ref-title">Dificultades de personas autistas en el ámbito laboral.</span>
+    </p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--web">🌐 Recurso web</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 25 -->
+<li class="ref-item" data-type="articulo">
+  <div class="ref-number">25</div>
+  <div class="ref-body">
+    <p class="ref-citation">PubMed Central. (s.f.). <span class="ref-title">Autism spectrum disorder.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--articulo">📄 Artículo</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 26 -->
+<li class="ref-item" data-type="articulo">
+  <div class="ref-number">26</div>
+  <div class="ref-body">
+    <p class="ref-citation">PubMed Central. (s.f.). <span class="ref-title">How autism became autism.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--articulo">📄 Artículo</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 27 -->
+<li class="ref-item" data-type="articulo">
+  <div class="ref-number">27</div>
+  <div class="ref-body">
+    <p class="ref-citation">The Transmitter. (s.f.). <span class="ref-title">The evolution of autism as a diagnosis.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--articulo">📄 Artículo</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 28 -->
+<li class="ref-item" data-type="articulo">
+  <div class="ref-number">28</div>
+  <div class="ref-body">
+    <p class="ref-citation">Autism History Project. (s.f.). <span class="ref-title">Autism in the DSM.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--articulo">📄 Artículo</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 29 -->
+<li class="ref-item" data-type="articulo">
+  <div class="ref-number">29</div>
+  <div class="ref-body">
+    <p class="ref-citation">International Society for Autism Research. (s.f.). <span class="ref-title">Autism: A century of discovery.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--articulo">📄 Artículo</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 30 -->
+<li class="ref-item" data-type="articulo">
+  <div class="ref-number">30</div>
+  <div class="ref-body">
+    <p class="ref-citation">Acta Neurológica Colombiana. (2026). <span class="ref-title">Perspectiva histórica del trastorno del espectro del autismo.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge ref-badge--articulo">📄 Artículo</span>
+      <span class="ref-year">2026</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 31 -->
+<li class="ref-item" data-type="documento">
+  <div class="ref-number">31</div>
+  <div class="ref-body">
+    <p class="ref-citation">International Association of Logopedics and Phoniatrics. (2023). <span class="ref-title">Autism spectrum disorders and health care services.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge">📄 Documento</span>
+      <span class="ref-year">2023</span>
+    </div>
+  </div>
+</li>
+
+<!-- REF 32 -->
+<li class="ref-item" data-type="documento">
+  <div class="ref-number">32</div>
+  <div class="ref-body">
+    <p class="ref-citation">Comisión Europea. (2021). <span class="ref-title">Strategy for the rights of persons with disabilities 2021–2030.</span></p>
+    <div class="ref-meta">
+      <span class="ref-badge">📄 Documento</span>
+      <span class="ref-year">2021</span>
+    </div>
+  </div>
+</li>
+
+      </ol>
+
+      <!-- Empty state -->
+      <div class="ref-empty" id="refEmpty" hidden>
+        <span class="ref-empty-icon">🔍</span>
+        <p>No se encontraron referencias para esa búsqueda.</p>
+        <button class="btn btn-secondary" id="refReset" style="margin-top:1rem;">Ver todas las referencias</button>
+      </div>
+
+    </div><!-- end ref-group -->
+
+    <!-- Nota APA -->
+    <div class="ref-apa-note reveal">
+      <span class="ref-apa-icon">ℹ️</span>
+      <p>Las referencias siguen el formato <strong>APA 7.ª edición</strong>. Puede copiar cada cita con el botón correspondiente.</p>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Difundiendo Información del TEA</h3>
+      <p>Un espacio dedicado a comprender, visibilizar y apoyar a las personas dentro del Espectro Autista y sus familias.</p>
+      <div class="footer-dots">
+        <div class="footer-dot" style="background:var(--c3)"></div>
+        <div class="footer-dot" style="background:var(--c6)"></div>
+        <div class="footer-dot" style="background:var(--c8)"></div>
+        <div class="footer-dot" style="background:var(--c10)"></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explorar</h5>
+      <a href="/html/inicio.html">Inicio</a>
+      <a href="/html/historia.html">Historia</a>
+      <a href="/html/caracteristicasyCondiciones.html">Características</a>
+      <a href="/html/sociedad.html">Sociedad</a>
+      <a href="/html/apoyando.html">Apoyando</a>
+      <a href="/html/referencias.html">Referencias</a>
+    </div>
+    <div class="footer-col">
+      <h5>En esta página</h5>
+      <a href="#libros">Libros</a>
+      <a href="#articulos">Artículos</a>
+      <a href="#web">Recursos web</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <a href="apoyando.html#contacto">Escríbenos</a>
+      <a href="apoyando.html#asociaciones">Asociaciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Buscando Educar del Autismo - Kenia Rivera Cortés</span>
+    <span>Página unicamente informativa</span>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Volver arriba">↑</button>
+
+<script src="/js/main.js"></script>
+<script src="/js/refe.js"></script>
+</body>
+</html>
