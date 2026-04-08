@@ -1,8 +1,3 @@
-// ============================================================
-//  REFERENCIAS.JS — lógica exclusiva de Referencias.html
-//  Agrega este archivo en Referencias.html con:
-//  <script src="referencias.js"></script>
-// ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -71,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let visible = 0;
 
     refItems.forEach(item => {
-      const typeMatch   = activeFilter === 'all' || item.dataset.type === activeFilter;
+      const typeMatch   = activeFilter === 'all' || item.dataset.type === activeFilter; //que hay y que no
       const keywords    = (item.dataset.keywords || '') + ' ' + item.textContent.toLowerCase();
       const searchMatch = searchQuery === '' || keywords.includes(searchQuery);
       const show        = typeMatch && searchMatch;
 
-      item.classList.toggle('hidden', !show);
+      item.classList.toggle('hidden', !show); //si hay bueno y si no nada
       if (show) {
         visible++;
         highlightText(item, searchQuery);
