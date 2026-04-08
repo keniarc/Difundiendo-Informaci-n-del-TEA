@@ -1,4 +1,4 @@
-    /* Extra timeline styling for this page */
+    /* linea de tiempo */
     .timeline-label {
       font-family: var(--font-body);
       font-size: 0.72rem;
@@ -34,7 +34,7 @@
       border-radius: 50%;
     }
 
-    /* diagnostic section */
+    /* diagnostico*/
     .diag-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
