@@ -1,8 +1,5 @@
-/* ============================================================
-   REFERENCIAS.CSS — estilos exclusivos de Referencias.html
-   ============================================================ */
 
-/* ——— HERO ——— */
+/* ——— HERO */
 .ref-hero {
   background: linear-gradient(135deg, var(--c1) 0%, var(--c2) 60%, var(--c3) 100%);
   min-height: 42vh;
@@ -45,7 +42,7 @@
   border-color: rgba(255,255,255,0.6);
 }
 
-/* ——— CONTROLS BAR ——— */
+
 .ref-controls-section {
   background: var(--cream);
   border-bottom: 1px solid rgba(38,70,83,0.08);
@@ -163,7 +160,6 @@
 
 .ref-count strong { color: var(--c3); }
 
-/* ——— GROUP HEADER ——— */
 .ref-group {
   margin-bottom: 4rem;
 }
@@ -191,7 +187,7 @@
   border-radius: 1px;
 }
 
-/* ——— REFERENCE LIST ——— */
+/* Lista de referenias */
 .ref-list {
   list-style: none;
   display: flex;
@@ -200,7 +196,7 @@
   padding: 0;
 }
 
-/* ——— REFERENCE ITEM ——— */
+/* contenidos */
 .ref-item {
   display: flex;
   gap: 1.25rem;
@@ -232,7 +228,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Number bubble */
+/* Numero de referencia */
 .ref-number {
   flex-shrink: 0;
   width: 36px; height: 36px;
@@ -371,7 +367,7 @@
   border-color: var(--c9);
 }
 
-/* ——— EMPTY STATE ——— */
+/* empty space */
 .ref-empty {
   text-align: center;
   padding: 4rem 2rem;
@@ -380,7 +376,7 @@
 
 .ref-empty-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
 
-/* ——— APA NOTE ——— */
+/*nota apa*/
 .ref-apa-note {
   display: flex;
   align-items: flex-start;
@@ -402,7 +398,7 @@
 
 .ref-apa-note strong { color: var(--c2); }
 
-/* ——— HIGHLIGHT al buscar ——— */
+/*  HIGHLIGHT al buscar  */
 mark.ref-highlight {
   background: rgba(233,196,106,0.4);
   color: inherit;
@@ -410,7 +406,7 @@ mark.ref-highlight {
   padding: 0 2px;
 }
 
-/* ——— RESPONSIVE ——— */
+/* responsivo */
 @media (max-width: 600px) {
   .ref-item { flex-direction: column; gap: 1rem; }
   .ref-number { width: 30px; height: 30px; font-size: 0.8rem; }
