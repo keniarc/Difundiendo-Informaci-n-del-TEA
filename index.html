@@ -19,7 +19,7 @@ const ctx    = canvas.getContext('2d');
 const textTop    = document.getElementById('textTop');
 const textBottom = document.getElementById('textBottom');
 
-// Responsive
+// Responsivo
 const BASE_W = 700;
 const BASE_H = 360;
 let W, H, CX, CY, A, pathPoints;
@@ -36,13 +36,13 @@ function buildPath() {
   canvas.width  = W;
   canvas.height = H;
 
-  pathPoints = [];
+  pathPoints = []; //espacio disponible 
   for (let i = 0; i <= STEPS; i++) {
     const t = (i / STEPS) * Math.PI * 2;
     pathPoints.push(lemniscate(t));
   }
 }
-
+//cantidad de puntos
 const STEPS = 2000;
 
 function lemniscate(t) {
@@ -92,6 +92,7 @@ function getColor(frac) {
         break;
     }
     }
+  //degradado de color
     const localT = s1.t === s0.t ? 0 : (frac - s0.t) / (s1.t - s0.t);
     return {
     r: Math.round(lerp(s0.r, s1.r, localT)),
@@ -100,8 +101,8 @@ function getColor(frac) {
     };
 }
 
-function lerp(a, b, t) { return a + (b - a) * t; }
-
+function lerp(a, b, t) { return a + (b - a) * t; } //medio
+//rapido lento
 function easeInOut(t) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
