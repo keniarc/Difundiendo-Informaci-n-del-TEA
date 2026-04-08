@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMobileMenu = document.querySelector('.nav-mobile-menu');
   const mobileLinks = document.querySelectorAll('.nav-mobile-menu a');
 
-  // Scroll effect
+  // Scroll
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
       navbar?.classList.add('scrolled');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
+//resalto
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .nav-mobile-menu a').forEach(a => {
     const href = a.getAttribute('href');
